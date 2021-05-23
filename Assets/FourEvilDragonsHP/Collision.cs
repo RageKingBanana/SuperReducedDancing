@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 using System.Collections;
 
 public class Collision : MonoBehaviour
@@ -19,4 +19,4 @@ public class Collision : MonoBehaviour
         if (collision.relativeVelocity.magnitude > 2)
             audioSource.Play();
     }
-}
+}*/
