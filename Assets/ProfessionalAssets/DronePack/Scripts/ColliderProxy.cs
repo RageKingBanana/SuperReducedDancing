@@ -7,13 +7,19 @@ namespace PhysicsPlayground
     public class ColliderProxy : MonoBehaviour {
 
         public GameObject host;
+        private Animator animator;
 
-        void OnTriggerEnter(Collider col) { Debug.Log("OnTriggerEnter"); }
-        void OnTriggerStay(Collider col) { Debug.Log("OnTriggerStay"); }
-        void OnTriggerExit(Collider col) { Debug.Log("OnTriggerExit");}
+private void Awake()
+{
+animator = GetComponent<Animator>();
+}
 
-        void OnCollisionEnter(Collision col) { Debug.Log("OnCollisionEnter"); }
-        void OnCollisionStay(Collision col) { Debug.Log("OnCollisionStay");}
-        void OnCollisionExit(Collision col) { Debug.Log("OnCollisionExit"); }
+        void OnTriggerEnter(Collider col) { animator.SetBool("character_nearby",true); }
+        void OnTriggerStay(Collider col) { animator.SetBool("character_nearby",true); }
+        void OnTriggerExit(Collider col) { animator.SetBool("character_nearby",false);}
+
+        void OnCollisionEnter(Collision col) { animator.SetBool("character_nearby",true); }
+        void OnCollisionStay(Collision col) { animator.SetBool("character_nearby",true);}
+        void OnCollisionExit(Collision col) { animator.SetBool("character_nearby",false);}
     }
 }
