@@ -6219,3 +6219,4 @@ Received Import Request.
 Start importing Assets/Sci-Fi Styled Modular Pack/Prefabs/Decorative elements/Arts/art_6.prefab using Guid(52c2612af80526741a33c2092448618c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '092f7ee50c664a924636800e675b3548') in 0.767793 seconds
   Import took 0.772745 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
